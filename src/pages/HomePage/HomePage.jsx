@@ -1,7 +1,6 @@
-import React from "react";
-
+import css from "./HomePage.module.css";
 const HomePage = () => {
-  return <div>HOME</div>;
+  return <div className={css.container}>HOME</div>;
 };
 
 export default HomePage;
