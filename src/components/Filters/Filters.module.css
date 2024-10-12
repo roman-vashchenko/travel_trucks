@@ -1,0 +1,22 @@
+.content {
+  width: 360px;
+}
+
+.text {
+  color: #475467;
+  font-weight: 500;
+  margin-bottom: 32px;
+}
+
+.typeFilter {
+  color: #101828;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.line {
+  margin: 24px 0;
+  height: 1px;
+  background-color: #dadde1;
+}
