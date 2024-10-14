@@ -1,5 +1,5 @@
 .section {
-  background-image: url("public/img/hero.jpg");
+  background-image: url("../../../public/img/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: calc(100vh - 72.8px);
