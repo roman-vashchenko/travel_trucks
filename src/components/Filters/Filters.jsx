@@ -10,27 +10,27 @@ const Filters = () => {
       <ul>
         <li>
           <svg width={32} height={32}>
-            <use href="../../../public/icons.svg#ac"></use>
+            <use href="/icons.svg#ac"></use>
           </svg>
         </li>
         <li>
           <svg width={32} height={32}>
-            <use href="../../../public/icons.svg#automatic"></use>
+            <use href="/icons.svg#automatic"></use>
           </svg>
         </li>
         <li>
           <svg width={32} height={32}>
-            <use href="../../../public/icons.svg#kitchen"></use>
+            <use href="/icons.svg#kitchen"></use>
           </svg>
         </li>
         <li>
           <svg width={32} height={32}>
-            <use href="../../../public/icons.svg#tv"></use>
+            <use href="/icons.svg#tv"></use>
           </svg>
         </li>
         <li>
           <svg width={32} height={32}>
-            <use href="../../../public/icons.svg#bathroom"></use>
+            <use href="/icons.svg#bathroom"></use>
           </svg>
         </li>
       </ul>
@@ -39,17 +39,17 @@ const Filters = () => {
       <ul>
         <li>
           <svg width={32} height={32}>
-            <use href="../../../public/icons.svg#van"></use>
+            <use href="/icons.svg#van"></use>
           </svg>
         </li>
         <li>
           <svg width={32} height={32}>
-            <use href="../../../public/icons.svg#fully_integrated"></use>
+            <use href="/icons.svg#fully_integrated"></use>
           </svg>
         </li>
         <li>
           <svg width={32} height={32}>
-            <use href="../../../public/icons.svg#alcove"></use>
+            <use href="/icons.svg#alcove"></use>
           </svg>
         </li>
       </ul>
