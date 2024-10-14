@@ -6,7 +6,7 @@ const Button = ({ children, type }) => {
   return (
     <>
       {type === "View Now" && (
-        <NavLink to="/catalog" className={css.btn}>
+        <NavLink to="/catalog" className={css.link}>
           {children}
         </NavLink>
       )}

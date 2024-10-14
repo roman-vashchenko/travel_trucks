@@ -5,8 +5,17 @@
   background-color: #e44848;
   border-color: transparent;
   color: #fff;
-  font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
+  letter-spacing: -0.08px;
+}
+
+.link {
+  display: inline-block;
+  padding: 16px 60px;
+  border-radius: 200px;
+  background-color: #e44848;
+  color: #fff;
+  font-weight: 500;
   letter-spacing: -0.08px;
 }
