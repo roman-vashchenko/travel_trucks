@@ -1,4 +1,6 @@
 import Button from "../Button/Button";
+import FilterListByEquipment from "../FilterListByEquipment/FilterListByEquipment";
+import FilterListByType from "../FilterListByType/FilterListByType";
 import css from "./Filters.module.css";
 
 const Filters = () => {
@@ -7,53 +9,10 @@ const Filters = () => {
       <p className={css.text}>Filters</p>
       <p className={css.typeFilter}>Vehicle equipment</p>
       <div className={css.line}></div>
-      <ul>
-        <li>
-          <svg width={32} height={32}>
-            <use href="/icons.svg#ac"></use>
-          </svg>
-        </li>
-        <li>
-          <svg width={32} height={32}>
-            <use href="/icons.svg#automatic"></use>
-          </svg>
-        </li>
-        <li>
-          <svg width={32} height={32}>
-            <use href="/icons.svg#kitchen"></use>
-          </svg>
-        </li>
-        <li>
-          <svg width={32} height={32}>
-            <use href="/icons.svg#tv"></use>
-          </svg>
-        </li>
-        <li>
-          <svg width={32} height={32}>
-            <use href="/icons.svg#bathroom"></use>
-          </svg>
-        </li>
-      </ul>
+      <FilterListByEquipment />
       <p className={css.typeFilter}>Vehicle type</p>
       <div className={css.line}></div>
-      <ul>
-        <li>
-          <svg width={32} height={32}>
-            <use href="/icons.svg#van"></use>
-          </svg>
-        </li>
-        <li>
-          <svg width={32} height={32}>
-            <use href="/icons.svg#fully_integrated"></use>
-          </svg>
-        </li>
-        <li>
-          <svg width={32} height={32}>
-            <use href="/icons.svg#alcove"></use>
-          </svg>
-        </li>
-      </ul>
-
+      <FilterListByType />
       <Button type="Search">Search</Button>
     </div>
   );

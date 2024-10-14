@@ -1,0 +1,27 @@
+.checkBoxLabel {
+  display: inline-block;
+  width: 100%;
+  padding: 16px 0;
+  border: 1px solid #dadde1;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.checkBoxLabel.checked {
+  border: 1px solid #e44848;
+}
+
+.label {
+  display: inline-block;
+  color: #101828;
+  font-weight: 500;
+  letter-spacing: -0.08px;
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
