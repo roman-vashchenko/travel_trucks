@@ -2,9 +2,9 @@
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  margin-bottom: 32px;
 }
 
 .item {
   width: calc((100% - 24px) / 3);
-  padding: 16px 0;
 }

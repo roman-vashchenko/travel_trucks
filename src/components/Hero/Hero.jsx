@@ -8,7 +8,7 @@ const Hero = () => {
       <p className={css.text}>
         You can find everything you want in our catalog
       </p>
-      <Button type="View Now">View Now</Button>
+      <Button>View Now</Button>
     </div>
   );
 };

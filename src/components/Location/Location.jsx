@@ -3,7 +3,7 @@ import { CiMap } from "react-icons/ci";
 
 const Location = () => {
   return (
-    <div>
+    <div className={css.content}>
       <p className={css.text}>Location</p>
       <p className={css.location}>
         <CiMap size={20} />

@@ -2,18 +2,23 @@
 import { NavLink } from "react-router-dom";
 import css from "./Button.module.css";
 
-const Button = ({ children, type }) => {
+const Button = ({ children }) => {
   return (
     <>
-      {type === "View Now" && (
+      {children === "View Now" && (
         <NavLink to="/catalog" className={css.link}>
           {children}
         </NavLink>
       )}
-      {type === "Search" && (
+      {children === "Search" && (
         <button type="button" className={css.btn}>
           {children}
         </button>
+      )}
+      {children === "Show more" && (
+        <NavLink to="/" className={css.link}>
+          {children}
+        </NavLink>
       )}
     </>
   );
