@@ -16,7 +16,7 @@ const Button = ({ children }) => {
         </button>
       )}
       {children === "Show more" && (
-        <NavLink to="/" className={css.link}>
+        <NavLink to="/catalog/1" className={css.link}>
           {children}
         </NavLink>
       )}
