@@ -1,7 +1,15 @@
-// import css from "./CamperReviews.module.css";
+import css from "./CamperReviews.module.css";
+
+import ReviewsList from "../ReviewsList/ReviewsList";
+import CommentForm from "../CommentForm/CommentForm";
 
 const CamperReviews = () => {
-  return <div>CamperReviews</div>;
+  return (
+    <section className={css.section}>
+      <ReviewsList />
+      <CommentForm />
+    </section>
+  );
 };
 
 export default CamperReviews;

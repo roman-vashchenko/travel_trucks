@@ -1,0 +1,3 @@
+.content {
+  width: calc(((100% - 40px) / 2) + 102px);
+}

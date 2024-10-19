@@ -1,0 +1,37 @@
+.title {
+  color: #101828;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.text {
+  color: #6c717b;
+  margin-bottom: 24px;
+}
+
+.wrapperForm {
+  width: calc((100% - 40px) / 2);
+  padding: 44px;
+}
+
+.wrapperFields {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.field {
+  padding: 18px;
+  border-radius: 12px;
+  background-color: #f7f7f7;
+  border-color: transparent;
+}
+
+.fieldComment {
+  composes: field;
+  resize: none;
+  min-height: 118px;
+}

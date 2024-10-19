@@ -20,6 +20,11 @@ const Button = ({ children }) => {
           {children}
         </NavLink>
       )}
+      {children === "Send" && (
+        <button type="submit" className={css.btnForm}>
+          {children}
+        </button>
+      )}
     </>
   );
 };

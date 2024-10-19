@@ -22,3 +22,9 @@
   letter-spacing: -0.08px;
   text-align: center;
 }
+
+.btnForm {
+  composes: btn;
+  display: block;
+  margin: 0 auto;
+}

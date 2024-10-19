@@ -60,7 +60,7 @@ const CampersList = () => {
   ];
 
   return (
-    <div>
+    <>
       <ul className={css.list}>
         {campers.map((camper) => (
           <li key={camper.id} className={css.item}>
@@ -68,7 +68,7 @@ const CampersList = () => {
           </li>
         ))}
       </ul>
-    </div>
+    </>
   );
 };
 

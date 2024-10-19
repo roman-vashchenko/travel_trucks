@@ -1,6 +1,11 @@
+.section {
+  display: flex;
+  gap: 40px;
+}
+
 .content {
-  width: 471px;
-  padding: 44px 80px;
+  width: calc((100% - 40px) / 2);
+  padding: 44px;
   border-radius: 10px;
   background-color: #f7f7f7;
 }
@@ -20,31 +25,4 @@
   padding: 12px 18px;
   border-radius: 100px;
   background-color: #f2f4f7;
-}
-
-.details {
-  color: #101828;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 1.2;
-}
-
-.line {
-  margin: 24px 0;
-  height: 1px;
-  background-color: #dadde1;
-}
-
-.detailsList {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  color: #101828;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.itemDetail {
-  display: flex;
-  justify-content: space-between;
 }

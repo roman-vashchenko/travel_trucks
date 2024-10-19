@@ -1,3 +1,6 @@
+import CharacteristicCamperItem from "../CharacteristicCamperItem/CharacteristicCamperItem";
+import CommentForm from "../CommentForm/CommentForm";
+import VehicleDetails from "../VehicleDetails/VehicleDetails";
 import css from "./CamperFeatures.module.css";
 const CamperFeatures = () => {
   const details = {
@@ -45,46 +48,19 @@ const CamperFeatures = () => {
     camper.water && { name: "Water", icon: "" },
   ].filter(Boolean);
   return (
-    <div className={css.content}>
-      <ul className={css.listСharacteristics}>
-        {characteristic.map((element, index) => (
-          <li key={index} className={css.item}>
-            <svg width={16} height={16}>
-              <use href={element.icon}></use>
-            </svg>
-            <span>{element.name}</span>
-          </li>
-        ))}
-      </ul>
-      <p className={css.details}>Vehicle details</p>
-      <div className={css.line}></div>
-      <ul className={css.detailsList}>
-        <li className={css.itemDetail}>
-          <p>Form</p>
-          <span>{details.form}</span>
-        </li>
-        <li className={css.itemDetail}>
-          <p>Length</p>
-          <span>{details.length}</span>
-        </li>
-        <li className={css.itemDetail}>
-          <p>Width</p>
-          <span>{details.width}</span>
-        </li>
-        <li className={css.itemDetail}>
-          <p>Height</p>
-          <span>{details.height}</span>
-        </li>
-        <li className={css.itemDetail}>
-          <p>Tank</p>
-          <span>{details.tank}</span>
-        </li>
-        <li className={css.itemDetail}>
-          <p>Consumption</p>
-          <span>{camper.consumption}</span>
-        </li>
-      </ul>
-    </div>
+    <section className={css.section}>
+      <div className={css.content}>
+        <ul className={css.listСharacteristics}>
+          {characteristic.map((element, index) => (
+            <li key={index} className={css.item}>
+              <CharacteristicCamperItem element={element} />
+            </li>
+          ))}
+        </ul>
+        <VehicleDetails details={details} />
+      </div>
+      <CommentForm />
+    </section>
   );
 };
 

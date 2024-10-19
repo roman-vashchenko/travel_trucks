@@ -8,7 +8,7 @@ const CatalogCampersPage = () => {
     <div>
       <h1 className={css.visuallyHidden}>Catalog travel trucks</h1>
       <section className={css.section}>
-        <div>
+        <div className={css.wrap}>
           <Location />
           <Filters />
         </div>

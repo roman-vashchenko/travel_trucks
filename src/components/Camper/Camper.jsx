@@ -4,6 +4,7 @@ import css from "./Camper.module.css";
 
 import Button from "../Button/Button";
 import { CiMap } from "react-icons/ci";
+import CharacteristicCamperItem from "../CharacteristicCamperItem/CharacteristicCamperItem";
 
 const Camper = ({ camper }) => {
   const {
@@ -67,10 +68,7 @@ const Camper = ({ camper }) => {
         <ul className={css.list}>
           {characteristic.map((element, index) => (
             <li key={index} className={css.item}>
-              <svg width={16} height={16}>
-                <use href={element.icon}></use>
-              </svg>
-              <span>{element.name}</span>
+              <CharacteristicCamperItem element={element} />
             </li>
           ))}
         </ul>

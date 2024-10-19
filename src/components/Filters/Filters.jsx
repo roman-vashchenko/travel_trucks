@@ -5,7 +5,7 @@ import css from "./Filters.module.css";
 
 const Filters = () => {
   return (
-    <div className={css.content}>
+    <div>
       <p className={css.text}>Filters</p>
       <p className={css.typeFilter}>Vehicle equipment</p>
       <div className={css.line}></div>
