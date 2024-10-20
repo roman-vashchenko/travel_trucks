@@ -8,6 +8,7 @@
   padding: 44px;
   border-radius: 10px;
   background-color: #f7f7f7;
+  box-sizing: border-box;
 }
 
 .listСharacteristics {

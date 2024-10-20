@@ -1,0 +1,31 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 60px;
+  background-color: #f2f4f7;
+}
+
+.icon span {
+  color: #e44848;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.33;
+}
+
+.name {
+  color: #101828;
+}
+
+.comment {
+  color: #475467;
+}
