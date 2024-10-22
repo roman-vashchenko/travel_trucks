@@ -1,5 +1,8 @@
 .list {
+  display: flex;
+  flex-direction: column;
   flex-grow: 2;
+  gap: 32px;
 }
 
 .item {

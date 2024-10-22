@@ -7,6 +7,12 @@ import { CiMap } from "react-icons/ci";
 import CharacteristicCamperItem from "../CharacteristicCamperItem/CharacteristicCamperItem";
 
 const Camper = ({ camper }) => {
+  function truncateText(text, maxLength) {
+    if (text.length > maxLength) {
+      return text.slice(0, maxLength) + "...";
+    }
+    return text;
+  }
   const {
     transmission,
     engine,
@@ -40,7 +46,7 @@ const Camper = ({ camper }) => {
           className={css.img}
           src={camper.gallery[0].original}
           alt={camper.name}
-          width={430}
+          width={292}
         />
       </div>
       <div className={css.content}>
@@ -64,7 +70,9 @@ const Camper = ({ camper }) => {
             {camper.location}
           </p>
         </div>
-        <p className={css.description}>{camper.description}</p>
+        <p className={css.description}>
+          {truncateText(camper.description, 50)}
+        </p>
         <ul className={css.list}>
           {characteristic.map((element, index) => (
             <li key={index} className={css.item}>
