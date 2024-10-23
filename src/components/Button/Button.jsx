@@ -1,8 +1,11 @@
 /* eslint-disable react/prop-types */
 import { NavLink } from "react-router-dom";
 import css from "./Button.module.css";
+import { useDispatch } from "react-redux";
+import { fetchCampers } from "../../redux/campers/operations";
 
 const Button = ({ children }) => {
+  const dispatch = useDispatch();
   return (
     <>
       {children === "View Now" && (
@@ -11,7 +14,13 @@ const Button = ({ children }) => {
         </NavLink>
       )}
       {children === "Search" && (
-        <button type="button" className={css.btn}>
+        <button
+          type="button"
+          className={css.btn}
+          onClick={() => {
+            dispatch(fetchCampers());
+          }}
+        >
           {children}
         </button>
       )}

@@ -30,14 +30,14 @@ const Camper = ({ camper }) => {
     transmission && { name: `${transmission}`, icon: "/icons.svg#automatic" },
     engine && { name: `${engine}`, icon: "" },
     AC && { name: "AC", icon: "/icons.svg#ac" },
-    bathroom && { name: "Bathroom", icon: "/icons.svg#bathroom" },
-    kitchen && { name: "Kitchen", icon: "/icons.svg#kitchen" },
+    bathroom && { name: "bathroom", icon: "/icons.svg#bathroom" },
+    kitchen && { name: "kitchen", icon: "/icons.svg#kitchen" },
     TV && { name: "TV", icon: "/icons.svg#tv" },
-    radio && { name: "Radio", icon: "" },
-    refrigerator && { name: "Refrigerator", icon: "" },
-    microwave && { name: "Microwave", icon: "" },
-    gas && { name: "Gas", icon: "" },
-    water && { name: "Water", icon: "" },
+    radio && { name: "radio", icon: "" },
+    refrigerator && { name: "refrigerator", icon: "" },
+    microwave && { name: "microwave", icon: "" },
+    gas && { name: "gas", icon: "" },
+    water && { name: "water", icon: "" },
   ].filter(Boolean);
   return (
     <>

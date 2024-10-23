@@ -1,13 +1,25 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import css from "./CheckBoxByFilter.module.css";
 import clsx from "clsx";
+import { useDispatch } from "react-redux";
+import { addFilter } from "../../redux/filters/slice";
 
-/* eslint-disable react/prop-types */
 const CheckBoxByFilter = ({ label, icon, id }) => {
+  const dispatch = useDispatch();
   const [isChecked, setIsChecked] = useState(false);
-
+  const filterMap = {
+    AC: "AC",
+    automatic: "transmission=automatic",
+    kitchen: "kitchen",
+    TV: "TV",
+    bathroom: "bathroom",
+    alcover: "alcover",
+  };
   const handleCheck = () => {
+    const filterQuery = filterMap[label];
     setIsChecked(!isChecked);
+    dispatch(addFilter(filterQuery));
   };
   return (
     <label

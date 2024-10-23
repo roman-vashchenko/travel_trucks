@@ -2,7 +2,7 @@ import CheckBoxByFilter from "../CheckBoxByFilter/CheckBoxByFilter";
 import css from "./FilterListByEquipment.module.css";
 
 const FilterListByEquipment = () => {
-  const labels = ["AC", "Automatic", "Kitchen", "TV", "Bathroom"];
+  const labels = ["AC", "automatic", "kitchen", "TV", "bathroom"];
   const iconsLinks = [
     "/icons.svg#ac",
     "/icons.svg#automatic",

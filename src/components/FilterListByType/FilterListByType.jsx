@@ -2,7 +2,7 @@ import CheckBoxByFilter from "../CheckBoxByFilter/CheckBoxByFilter";
 import css from "./FilterListByType.module.css";
 
 const FilterListByType = () => {
-  const labels = ["Van", "Fully Integrated", "Alcove"];
+  const labels = ["Van", "Fully Integrated", "alcover"];
   const iconsLinks = [
     "/icons.svg#van",
     "/icons.svg#fully_integrated",
