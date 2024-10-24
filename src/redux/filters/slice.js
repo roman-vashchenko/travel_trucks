@@ -3,10 +3,14 @@ import { createSlice } from "@reduxjs/toolkit";
 const filtersSlice = createSlice({
   name: "filters",
   initialState: {
+    location: "",
     propertys: [],
   },
   reducers: {
-    addFilter: (state, { payload }) => {
+    addLocation: (state, { payload }) => {
+      state.location = payload;
+    },
+    addProperty: (state, { payload }) => {
       if (state.propertys.includes(payload)) {
         state.propertys = state.propertys.filter(
           (property) => property !== payload
@@ -18,5 +22,5 @@ const filtersSlice = createSlice({
   },
 });
 
-export const { addFilter } = filtersSlice.actions;
+export const { addLocation, addProperty } = filtersSlice.actions;
 export const filtersReducer = filtersSlice.reducer;

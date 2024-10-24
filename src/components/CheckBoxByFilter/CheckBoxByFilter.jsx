@@ -3,23 +3,23 @@ import { useState } from "react";
 import css from "./CheckBoxByFilter.module.css";
 import clsx from "clsx";
 import { useDispatch } from "react-redux";
-import { addFilter } from "../../redux/filters/slice";
+import { addProperty } from "../../redux/filters/slice";
 
 const CheckBoxByFilter = ({ label, icon, id }) => {
   const dispatch = useDispatch();
   const [isChecked, setIsChecked] = useState(false);
   const filterMap = {
-    AC: "AC",
+    AC: "AC=true",
     automatic: "transmission=automatic",
-    kitchen: "kitchen",
-    TV: "TV",
-    bathroom: "bathroom",
+    kitchen: "kitchen=true",
+    TV: "TV=true",
+    bathroom: "bathroom=true",
     alcover: "alcover",
   };
   const handleCheck = () => {
     const filterQuery = filterMap[label];
     setIsChecked(!isChecked);
-    dispatch(addFilter(filterQuery));
+    dispatch(addProperty(filterQuery));
   };
   return (
     <label

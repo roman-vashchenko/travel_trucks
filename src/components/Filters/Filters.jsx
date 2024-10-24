@@ -3,12 +3,11 @@ import Button from "../Button/Button";
 import FilterListByEquipment from "../FilterListByEquipment/FilterListByEquipment";
 import FilterListByType from "../FilterListByType/FilterListByType";
 import css from "./Filters.module.css";
-import { selectFiltersPropertys } from "../../redux/filters/selectors";
+import { selectFiltersByPropertys } from "../../redux/filters/selectors";
 
 const Filters = () => {
-  const arr = useSelector(selectFiltersPropertys);
-  console.log(arr);
-
+  const filter = useSelector(selectFiltersByPropertys);
+  console.log(filter);
   return (
     <div>
       <p className={css.text}>Filters</p>
