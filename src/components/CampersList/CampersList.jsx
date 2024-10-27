@@ -7,7 +7,7 @@ const CampersList = () => {
   const campers = useSelector(selectCampers);
 
   return (
-    <>
+    <div className={css.content}>
       <ul className={css.list}>
         {campers.map((camper) => (
           <li key={camper.id} className={css.item}>
@@ -15,7 +15,7 @@ const CampersList = () => {
           </li>
         ))}
       </ul>
-    </>
+    </div>
   );
 };
 

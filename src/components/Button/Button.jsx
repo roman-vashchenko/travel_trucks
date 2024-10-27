@@ -4,7 +4,7 @@ import css from "./Button.module.css";
 import { useDispatch } from "react-redux";
 import { fetchCampers } from "../../redux/campers/operations";
 
-const Button = ({ children }) => {
+const Button = ({ children, id }) => {
   const dispatch = useDispatch();
   return (
     <>
@@ -25,7 +25,7 @@ const Button = ({ children }) => {
         </button>
       )}
       {children === "Show more" && (
-        <NavLink to="/catalog/1" className={css.link}>
+        <NavLink to={`/catalog/${id}`} className={css.link}>
           {children}
         </NavLink>
       )}

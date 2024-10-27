@@ -7,6 +7,7 @@ export const fetchCampers = createAsyncThunk(
   "campers/fetchCampers",
   async (_, thunkAPI) => {
     const { location, propertys } = thunkAPI.getState().filters;
+
     let query = propertys.length ? `?${propertys.join("&")}` : "";
 
     if (location) {

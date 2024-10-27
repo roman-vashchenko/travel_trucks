@@ -5,7 +5,9 @@ const CharacteristicCamperItem = ({ element }) => {
       <svg width={16} height={16}>
         <use href={element.icon}></use>
       </svg>
-      <span>{element.name}</span>
+      <span>
+        {element.name.charAt(0).toUpperCase() + element.name.slice(1)}
+      </span>
     </>
   );
 };

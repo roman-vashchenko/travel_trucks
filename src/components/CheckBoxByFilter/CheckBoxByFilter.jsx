@@ -37,7 +37,9 @@ const CheckBoxByFilter = ({ label, icon, id }) => {
         <svg width={32} height={32}>
           <use href={icon}></use>
         </svg>
-        <span className={css.label}>{label}</span>
+        <span className={css.label}>
+          {label.charAt(0).toUpperCase() + label.slice(1)}
+        </span>
       </div>
     </label>
   );
