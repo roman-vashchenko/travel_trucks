@@ -28,3 +28,15 @@
   display: block;
   margin: 0 auto;
 }
+
+.btnLoadMore {
+  padding: 16px 32px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 200px;
+  border: 1px solid #dadde1;
+  color: var(--Main, #101828);
+  font-family: inherit;
+  font-weight: 500;
+  letter-spacing: -0.08px;
+}

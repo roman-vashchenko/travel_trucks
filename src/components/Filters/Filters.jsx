@@ -5,7 +5,8 @@ import FilterListByType from "../FilterListByType/FilterListByType";
 import css from "./Filters.module.css";
 import { selectFiltersByPropertys } from "../../redux/filters/selectors";
 
-const Filters = () => {
+// eslint-disable-next-line react/prop-types
+const Filters = ({ page }) => {
   const filter = useSelector(selectFiltersByPropertys);
   console.log(filter);
   return (
@@ -17,7 +18,9 @@ const Filters = () => {
       <p className={css.typeFilter}>Vehicle type</p>
       <div className={css.line}></div>
       <FilterListByType />
-      <Button type="Search">Search</Button>
+      <Button page={page} type="Search">
+        Search
+      </Button>
     </div>
   );
 };

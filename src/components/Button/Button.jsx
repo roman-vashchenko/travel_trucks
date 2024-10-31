@@ -4,8 +4,9 @@ import css from "./Button.module.css";
 import { useDispatch } from "react-redux";
 import { fetchCampers } from "../../redux/campers/operations";
 
-const Button = ({ children, id }) => {
+const Button = ({ children, id, handleLoadMore, page }) => {
   const dispatch = useDispatch();
+
   return (
     <>
       {children === "View Now" && (
@@ -18,7 +19,7 @@ const Button = ({ children, id }) => {
           type="button"
           className={css.btn}
           onClick={() => {
-            dispatch(fetchCampers());
+            dispatch(fetchCampers(page));
           }}
         >
           {children}
@@ -31,6 +32,15 @@ const Button = ({ children, id }) => {
       )}
       {children === "Send" && (
         <button type="submit" className={css.btnForm}>
+          {children}
+        </button>
+      )}
+      {children === "Load more" && (
+        <button
+          type="button"
+          className={css.btnLoadMore}
+          onClick={handleLoadMore}
+        >
           {children}
         </button>
       )}
