@@ -8,15 +8,14 @@ import { fetchCampers } from "../../redux/campers/operations";
 
 const CatalogCampersPage = () => {
   const dispatch = useDispatch();
-
   const [page, setPage] = useState(1);
-  console.log(page);
+
   useEffect(() => {
     dispatch(fetchCampers(page));
-  }, [page, dispatch]);
+  }, [dispatch, page]);
 
   const handleLoadMore = () => {
-    setPage((prevPage) => prevPage + 1);
+    setPage(page + 1);
   };
   return (
     <div>

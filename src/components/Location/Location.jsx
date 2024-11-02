@@ -1,8 +1,9 @@
 import { useDispatch, useSelector } from "react-redux";
 import css from "./Location.module.css";
 import { CiMap } from "react-icons/ci";
-import { selectFilterByLocation } from "../../redux/filters/selectors";
-import { addLocation } from "../../redux/filters/slice";
+
+import { addLocation } from "../../redux/campers/slice";
+import { selectFilterByLocation } from "../../redux/campers/selectors";
 
 const Location = () => {
   const value = useSelector(selectFilterByLocation);

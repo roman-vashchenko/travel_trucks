@@ -6,8 +6,25 @@ const campersSlice = createSlice({
   initialState: {
     items: [],
     currentItem: null,
+    location: "",
+    propertys: [],
+    total: 0,
     isLoader: false,
     error: null,
+  },
+  reducers: {
+    addLocation: (state, { payload }) => {
+      state.location = payload;
+    },
+    addProperty: (state, { payload }) => {
+      if (state.propertys.includes(payload)) {
+        state.propertys = state.propertys.filter(
+          (property) => property !== payload
+        );
+      } else {
+        state.propertys.push(payload);
+      }
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -17,8 +34,11 @@ const campersSlice = createSlice({
       })
       .addCase(fetchCampers.fulfilled, (state, { payload }) => {
         state.isLoader = false;
+        if (state.location || state.propertys.length) {
+          state.items = [];
+        }
         state.items = [...state.items, ...payload.items];
-        // state.items = payload.items;
+        state.total = payload.total;
       })
       .addCase(fetchCampers.rejected, (state, { payload }) => {
         state.isLoader = false;
@@ -40,3 +60,4 @@ const campersSlice = createSlice({
 });
 
 export const campersReducer = campersSlice.reducer;
+export const { addLocation, addProperty } = campersSlice.actions;

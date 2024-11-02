@@ -6,7 +6,7 @@ axios.defaults.baseURL = "https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/";
 export const fetchCampers = createAsyncThunk(
   "campers/fetchCampers",
   async (page, thunkAPI) => {
-    const { location, propertys } = thunkAPI.getState().filters;
+    const { location, propertys } = thunkAPI.getState().campers;
 
     let query = propertys.length ? `?p=${page}&l=5&${propertys.join("&")}` : "";
 

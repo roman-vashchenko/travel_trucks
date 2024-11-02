@@ -1,13 +1,15 @@
 import { useSelector } from "react-redux";
 import Camper from "../Camper/Camper";
 import css from "./CampersList.module.css";
-import { selectCampers } from "../../redux/campers/selectors";
+import { selectCampers, totalCampers } from "../../redux/campers/selectors";
 import Button from "../Button/Button";
 
 // eslint-disable-next-line react/prop-types
 const CampersList = ({ handleLoadMore }) => {
   const campers = useSelector(selectCampers);
+  const total = useSelector(totalCampers);
   console.log(campers);
+  console.log(total);
 
   return (
     <div className={css.content}>
@@ -18,7 +20,9 @@ const CampersList = ({ handleLoadMore }) => {
           </li>
         ))}
       </ul>
-      <Button handleLoadMore={handleLoadMore}>Load more</Button>
+      {total !== campers.length && (
+        <Button handleLoadMore={handleLoadMore}>Load more</Button>
+      )}
     </div>
   );
 };

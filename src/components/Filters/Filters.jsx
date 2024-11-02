@@ -1,14 +1,12 @@
+/* eslint-disable no-unused-vars */
 import { useSelector } from "react-redux";
 import Button from "../Button/Button";
 import FilterListByEquipment from "../FilterListByEquipment/FilterListByEquipment";
 import FilterListByType from "../FilterListByType/FilterListByType";
 import css from "./Filters.module.css";
-import { selectFiltersByPropertys } from "../../redux/filters/selectors";
 
-// eslint-disable-next-line react/prop-types
+/* eslint-disable react/prop-types */
 const Filters = ({ page }) => {
-  const filter = useSelector(selectFiltersByPropertys);
-  console.log(filter);
   return (
     <div>
       <p className={css.text}>Filters</p>
@@ -18,7 +16,7 @@ const Filters = ({ page }) => {
       <p className={css.typeFilter}>Vehicle type</p>
       <div className={css.line}></div>
       <FilterListByType />
-      <Button page={page} type="Search">
+      <Button type="Search" page={page}>
         Search
       </Button>
     </div>

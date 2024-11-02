@@ -3,7 +3,7 @@ import { useState } from "react";
 import css from "./CheckBoxByFilter.module.css";
 import clsx from "clsx";
 import { useDispatch } from "react-redux";
-import { addProperty } from "../../redux/filters/slice";
+import { addProperty } from "../../redux/campers/slice";
 
 const CheckBoxByFilter = ({ label, icon, id }) => {
   const dispatch = useDispatch();
