@@ -18,16 +18,16 @@ function CharacteristicCamperList({ camper }) {
   } = camper;
   const characteristic = [
     transmission && { name: `${transmission}`, icon: "/icons.svg#automatic" },
-    engine && { name: `${engine}`, icon: "" },
+    engine && { name: `${engine}`, icon: "/icons.svg#petrol" },
     AC && { name: "AC", icon: "/icons.svg#ac" },
     bathroom && { name: "bathroom", icon: "/icons.svg#bathroom" },
     kitchen && { name: "kitchen", icon: "/icons.svg#kitchen" },
     TV && { name: "TV", icon: "/icons.svg#tv" },
-    radio && { name: "radio", icon: "" },
-    refrigerator && { name: "refrigerator", icon: "" },
-    microwave && { name: "microwave", icon: "" },
-    gas && { name: "gas", icon: "" },
-    water && { name: "water", icon: "" },
+    radio && { name: "radio", icon: "/icons.svg#radio" },
+    refrigerator && { name: "refrigerator", icon: "/icons.svg#refrigerator" },
+    microwave && { name: "microwave", icon: "/icons.svg#microwave" },
+    gas && { name: "gas", icon: "/icons.svg#gas" },
+    water && { name: "water", icon: "/icons.svg#water" },
   ].filter(Boolean);
 
   return (

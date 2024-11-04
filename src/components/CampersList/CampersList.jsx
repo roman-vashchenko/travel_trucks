@@ -8,8 +8,6 @@ import Button from "../Button/Button";
 const CampersList = ({ handleLoadMore }) => {
   const campers = useSelector(selectCampers);
   const total = useSelector(totalCampers);
-  console.log(campers);
-  console.log(total);
 
   return (
     <div className={css.content}>
@@ -20,7 +18,7 @@ const CampersList = ({ handleLoadMore }) => {
           </li>
         ))}
       </ul>
-      {total !== campers.length && (
+      {campers.length > 0 && total !== campers.length && (
         <Button handleLoadMore={handleLoadMore}>Load more</Button>
       )}
     </div>

@@ -6,7 +6,7 @@ import FilterListByType from "../FilterListByType/FilterListByType";
 import css from "./Filters.module.css";
 
 /* eslint-disable react/prop-types */
-const Filters = ({ page }) => {
+const Filters = ({ setPage }) => {
   return (
     <div>
       <p className={css.text}>Filters</p>
@@ -16,9 +16,7 @@ const Filters = ({ page }) => {
       <p className={css.typeFilter}>Vehicle type</p>
       <div className={css.line}></div>
       <FilterListByType />
-      <Button type="Search" page={page}>
-        Search
-      </Button>
+      <Button setPage={setPage}>Search</Button>
     </div>
   );
 };

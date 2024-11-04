@@ -5,10 +5,15 @@ import Location from "../../components/Location/Location";
 import css from "./CatalogCampersPage.module.css";
 import { useDispatch } from "react-redux";
 import { fetchCampers } from "../../redux/campers/operations";
+import { resetFilters } from "../../redux/campers/slice";
 
 const CatalogCampersPage = () => {
   const dispatch = useDispatch();
   const [page, setPage] = useState(1);
+
+  useEffect(() => {
+    dispatch(resetFilters());
+  }, [dispatch]);
 
   useEffect(() => {
     dispatch(fetchCampers(page));
@@ -23,7 +28,7 @@ const CatalogCampersPage = () => {
       <section className={css.section}>
         <div className={css.wrap}>
           <Location />
-          <Filters page={page} />
+          <Filters setPage={setPage} />
         </div>
         <CampersList handleLoadMore={handleLoadMore} />
       </section>
