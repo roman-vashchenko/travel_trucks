@@ -1,13 +1,16 @@
 import { useSelector } from "react-redux";
 import Camper from "../Camper/Camper";
 import css from "./CampersList.module.css";
-import { selectCampers, totalCampers } from "../../redux/campers/selectors";
+import {
+  selectCampers,
+  selectTotalCampers,
+} from "../../redux/campers/selectors";
 import Button from "../Button/Button";
 
 // eslint-disable-next-line react/prop-types
 const CampersList = ({ handleLoadMore }) => {
   const campers = useSelector(selectCampers);
-  const total = useSelector(totalCampers);
+  const total = useSelector(selectTotalCampers);
 
   return (
     <div className={css.content}>

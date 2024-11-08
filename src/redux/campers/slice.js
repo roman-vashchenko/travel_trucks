@@ -6,6 +6,7 @@ const campersSlice = createSlice({
   initialState: {
     items: [],
     currentItem: null,
+    selectedItems: [],
     location: "",
     propertys: [],
     total: 0,
@@ -28,6 +29,15 @@ const campersSlice = createSlice({
     resetFilters: (state) => {
       state.location = "";
       state.propertys = [];
+    },
+    addToSelectedList: (state, { payload }) => {
+      if (state.selectedItems.includes(payload)) {
+        state.selectedItems = state.selectedItems.filter(
+          (item) => item !== payload
+        );
+      } else {
+        state.selectedItems.push(payload);
+      }
     },
   },
   extraReducers: (builder) => {
@@ -66,4 +76,5 @@ const campersSlice = createSlice({
 });
 
 export const campersReducer = campersSlice.reducer;
-export const { addLocation, addProperty, resetFilters } = campersSlice.actions;
+export const { addLocation, addProperty, resetFilters, addToSelectedList } =
+  campersSlice.actions;

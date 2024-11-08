@@ -22,6 +22,22 @@
   line-height: 1.33;
 }
 
+.btnFavorite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.iconHeart {
+  fill: rgba(16, 24, 40, 1);
+}
+
+.isSelect {
+  fill: rgba(228, 72, 72, 1);
+}
+
 .wrap {
   display: flex;
   gap: 16px;

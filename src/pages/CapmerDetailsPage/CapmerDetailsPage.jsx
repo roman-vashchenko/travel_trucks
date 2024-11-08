@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectCamper } from "../../redux/campers/selectors";
 import { fetchCamperById } from "../../redux/campers/operations";
 import { useEffect } from "react";
+import { Toaster } from "react-hot-toast";
 
 const CapmerDetailsPage = () => {
   const { id } = useParams();
@@ -22,6 +23,7 @@ const CapmerDetailsPage = () => {
 
   return (
     <section className={css.section}>
+      <Toaster position="top-right" reverseOrder={true} />
       {camper && (
         <>
           <h1 className={css.reviewer_name}>{camper.name}</h1>

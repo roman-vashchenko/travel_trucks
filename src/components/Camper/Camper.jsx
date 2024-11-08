@@ -1,18 +1,28 @@
 /* eslint-disable react/prop-types */
-import { CiHeart } from "react-icons/ci";
 import css from "./Camper.module.css";
 
 import Button from "../Button/Button";
 import { CiMap } from "react-icons/ci";
 import CharacteristicCamperList from "../CharacteristicCamperList/CharacteristicCamperList";
+import { useDispatch, useSelector } from "react-redux";
+import { addToSelectedList } from "../../redux/campers/slice";
+import { selecteItemsSelected } from "../../redux/campers/selectors";
+// import clsx from "clsx";
 
 const Camper = ({ camper }) => {
+  const dispatch = useDispatch();
   function truncateText(text, maxLength) {
     if (text.length > maxLength) {
       return text.slice(0, maxLength) + "...";
     }
     return text;
   }
+
+  const handleClick = () => {
+    dispatch(addToSelectedList(camper.id));
+  };
+
+  const selectedItemsList = useSelector(selecteItemsSelected);
 
   return (
     <>
@@ -28,7 +38,24 @@ const Camper = ({ camper }) => {
         <div className={css.wrapTitle}>
           <h2 className={css.name}>{camper.name}</h2>
           <p className={css.price}>
-            €{camper.price}.00 <CiHeart className={css.icon} size={26} />
+            €{camper.price}.00{" "}
+            <button
+              type="button"
+              className={css.btnFavorite}
+              onClick={handleClick}
+            >
+              <svg
+                width={26}
+                height={26}
+                style={{
+                  color: selectedItemsList.includes(camper.id)
+                    ? "rgba(228, 72, 72, 1)"
+                    : "rgba(16, 24, 40, 1)",
+                }}
+              >
+                <use href="/icons.svg#heart"></use>
+              </svg>
+            </button>
           </p>
         </div>
         <div className={css.wrap}>
@@ -46,7 +73,7 @@ const Camper = ({ camper }) => {
           </p>
         </div>
         <p className={css.description}>
-          {truncateText(camper.description, 50)}
+          {truncateText(camper.description, 70)}
         </p>
         <CharacteristicCamperList camper={camper} />
         <Button id={camper.id}>Show more</Button>
