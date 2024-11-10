@@ -24,7 +24,7 @@ const CapmerDetailsPage = () => {
   return (
     <section className={css.section}>
       <Toaster position="top-right" reverseOrder={true} />
-      {camper && (
+      {camper ? (
         <>
           <h1 className={css.reviewer_name}>{camper.name}</h1>
           <div className={css.wrap}>
@@ -65,6 +65,8 @@ const CapmerDetailsPage = () => {
           </div>
           <Outlet />
         </>
+      ) : (
+        <p style={{ fontSize: "30px" }}>Truck not found</p>
       )}
     </section>
   );

@@ -7,7 +7,6 @@ import CharacteristicCamperList from "../CharacteristicCamperList/Characteristic
 import { useDispatch, useSelector } from "react-redux";
 import { addToSelectedList } from "../../redux/campers/slice";
 import { selecteItemsSelected } from "../../redux/campers/selectors";
-// import clsx from "clsx";
 
 const Camper = ({ camper }) => {
   const dispatch = useDispatch();

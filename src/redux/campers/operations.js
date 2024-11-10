@@ -7,7 +7,7 @@ axios.defaults.baseURL = "https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/";
 export const fetchCampers = createAsyncThunk(
   "campers/fetchCampersByFilter",
   async (page, thunkAPI) => {
-    const { location, propertys } = thunkAPI.getState().campers;
+    const { location, propertys } = thunkAPI.getState().filters;
 
     let query = propertys.length ? `?p=${page}&l=5&${propertys.join("&")}` : "";
 
@@ -31,8 +31,8 @@ export const fetchCampers = createAsyncThunk(
       return data;
     } catch (error) {
       toast.dismiss();
-      toast.error(`${error.message}`);
-      return thunkAPI.rejectWithValue(error.message);
+      toast.error(`${error.response.statusText}`);
+      return thunkAPI.rejectWithValue(error.status);
     }
   }
 );
@@ -47,8 +47,8 @@ export const fetchCamperById = createAsyncThunk(
       return data;
     } catch (error) {
       toast.dismiss();
-      toast.error(`${error.message}`);
-      return thunkAPI.rejectWithValue(error.massage);
+      toast.error(`${error.response.statusText}`);
+      return thunkAPI.rejectWithValue(error.status);
     }
   }
 );

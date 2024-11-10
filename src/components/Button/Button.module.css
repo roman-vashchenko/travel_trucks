@@ -9,6 +9,12 @@
   color: #fff;
   font-weight: 500;
   letter-spacing: -0.08px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: rgba(216, 67, 67, 1);
 }
 
 .link {
@@ -21,6 +27,12 @@
   font-weight: 500;
   letter-spacing: -0.08px;
   text-align: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.link:hover,
+.link:focus {
+  background-color: rgba(216, 67, 67, 1);
 }
 
 .btnForm {
@@ -35,8 +47,14 @@
   margin: 0 auto;
   border-radius: 200px;
   border: 1px solid #dadde1;
-  color: var(--Main, #101828);
+  color: #101828;
   font-family: inherit;
   font-weight: 500;
   letter-spacing: -0.08px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btnLoadMore:hover,
+.btnLoadMore:focus {
+  border: 1px solid rgba(216, 67, 67, 1);
 }

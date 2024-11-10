@@ -5,8 +5,8 @@ import Location from "../../components/Location/Location";
 import css from "./CatalogCampersPage.module.css";
 import { useDispatch } from "react-redux";
 import { fetchCampers } from "../../redux/campers/operations";
-import { resetFilters } from "../../redux/campers/slice";
 import { Toaster } from "react-hot-toast";
+import { resetFilters } from "../../redux/filters/slice";
 
 const CatalogCampersPage = () => {
   const dispatch = useDispatch();

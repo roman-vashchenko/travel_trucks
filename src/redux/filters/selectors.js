@@ -1,2 +1,2 @@
-// export const selectFilterByLocation = (state) => state.filters.location;
-// export const selectFiltersByPropertys = (state) => state.filters.propertys;
+export const selectFilterByLocation = (state) => state.filters.location;
+export const selectFiltersByPropertys = (state) => state.filters.propertys;

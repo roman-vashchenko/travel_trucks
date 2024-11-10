@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchCamperById, fetchCampers } from "./operations";
+import toast from "react-hot-toast";
 
 const campersSlice = createSlice({
   name: "campers",
@@ -7,47 +8,29 @@ const campersSlice = createSlice({
     items: [],
     currentItem: null,
     selectedItems: [],
-    location: "",
-    propertys: [],
     total: 0,
-    isLoader: false,
-    error: null,
+    isLoading: false,
   },
   reducers: {
-    addLocation: (state, { payload }) => {
-      state.location = payload;
-    },
-    addProperty: (state, { payload }) => {
-      if (state.propertys.includes(payload)) {
-        state.propertys = state.propertys.filter(
-          (property) => property !== payload
-        );
-      } else {
-        state.propertys.push(payload);
-      }
-    },
-    resetFilters: (state) => {
-      state.location = "";
-      state.propertys = [];
-    },
     addToSelectedList: (state, { payload }) => {
       if (state.selectedItems.includes(payload)) {
         state.selectedItems = state.selectedItems.filter(
           (item) => item !== payload
         );
+        toast.success("The truck has been removed to favorites");
       } else {
         state.selectedItems.push(payload);
+        toast.success("The truck has been added to favorites");
       }
     },
   },
   extraReducers: (builder) => {
     builder
       .addCase(fetchCampers.pending, (state) => {
-        state.error = null;
-        state.isLoader = true;
+        state.isLoading = true;
       })
       .addCase(fetchCampers.fulfilled, (state, { payload, meta }) => {
-        state.isLoader = false;
+        state.isLoading = false;
         state.total = payload.total;
         if (meta.arg === 1) {
           state.items = payload.items;
@@ -56,11 +39,13 @@ const campersSlice = createSlice({
         }
       })
       .addCase(fetchCampers.rejected, (state, { payload }) => {
-        state.isLoader = false;
-        state.error = payload;
+        state.isLoading = false;
+        if (payload === 404) {
+          state.items = [];
+          state.currentItem = null;
+        }
       })
       .addCase(fetchCamperById.pending, (state) => {
-        state.error = null;
         state.isLoader = true;
         state.currentItem = null;
       })
@@ -70,11 +55,12 @@ const campersSlice = createSlice({
       })
       .addCase(fetchCamperById.rejected, (state, { payload }) => {
         state.isLoader = false;
-        state.error = payload;
+        if (payload === 404) {
+          state.currentItem = null;
+        }
       });
   },
 });
 
 export const campersReducer = campersSlice.reducer;
-export const { addLocation, addProperty, resetFilters, addToSelectedList } =
-  campersSlice.actions;
+export const { addToSelectedList } = campersSlice.actions;
