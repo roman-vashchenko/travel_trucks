@@ -3,7 +3,7 @@ import css from "./CapmerDetailsPage.module.css";
 import { NavLink, Outlet, useParams } from "react-router-dom";
 import clsx from "clsx";
 import { useDispatch, useSelector } from "react-redux";
-import { selectCamper } from "../../redux/campers/selectors";
+import { selectCamper, selecteIsLoading } from "../../redux/campers/selectors";
 import { fetchCamperById } from "../../redux/campers/operations";
 import { useEffect } from "react";
 import { Toaster } from "react-hot-toast";
@@ -12,6 +12,7 @@ const CapmerDetailsPage = () => {
   const { id } = useParams();
   const dispatch = useDispatch();
   const camper = useSelector(selectCamper);
+  const isLoading = useSelector(selecteIsLoading);
 
   useEffect(() => {
     dispatch(fetchCamperById(id));
@@ -24,7 +25,7 @@ const CapmerDetailsPage = () => {
   return (
     <section className={css.section}>
       <Toaster position="top-right" reverseOrder={true} />
-      {camper ? (
+      {camper && (
         <>
           <h1 className={css.reviewer_name}>{camper.name}</h1>
           <div className={css.wrap}>
@@ -65,7 +66,8 @@ const CapmerDetailsPage = () => {
           </div>
           <Outlet />
         </>
-      ) : (
+      )}
+      {!isLoading && camper === null && (
         <p style={{ fontSize: "30px" }}>Truck not found</p>
       )}
     </section>
