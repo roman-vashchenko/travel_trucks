@@ -42,19 +42,17 @@ const campersSlice = createSlice({
         state.isLoading = false;
         if (payload === 404) {
           state.items = [];
-          state.currentItem = null;
         }
       })
       .addCase(fetchCamperById.pending, (state) => {
-        state.isLoader = true;
-        state.currentItem = null;
+        state.isLoading = true;
       })
       .addCase(fetchCamperById.fulfilled, (state, { payload }) => {
-        state.isLoader = false;
+        state.isLoading = false;
         state.currentItem = payload;
       })
       .addCase(fetchCamperById.rejected, (state, { payload }) => {
-        state.isLoader = false;
+        state.isLoading = false;
         if (payload === 404) {
           state.currentItem = null;
         }
