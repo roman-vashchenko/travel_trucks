@@ -9,6 +9,15 @@
   width: calc((100% - 24px) / 3);
 }
 
-.item:nth-child(2) label {
-  padding: 4px 0;
+@media (max-width: 768px) {
+  .list {
+    gap: 7px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .item:nth-child(2) label {
+    padding: 4px 0;
+  }
 }

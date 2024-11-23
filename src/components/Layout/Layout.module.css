@@ -6,3 +6,9 @@
   border-bottom: 1px solid #f2f4f7;
   background-color: #f7f7f7;
 }
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px 0 20px;
+  }
+}

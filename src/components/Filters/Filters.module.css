@@ -16,3 +16,13 @@
   height: 1px;
   background-color: #dadde1;
 }
+
+@media (max-width: 768px) {
+  .text {
+    font-size: 12px;
+    margin-bottom: 20px;
+  }
+  .typeFilter {
+    font-size: 14px;
+  }
+}

@@ -14,3 +14,12 @@
   border-radius: 100px;
   background-color: #f2f4f7;
 }
+
+@media (max-width: 768px) {
+  .list {
+    margin-bottom: 20px;
+  }
+  .item {
+    padding: 1px 10px;
+  }
+}

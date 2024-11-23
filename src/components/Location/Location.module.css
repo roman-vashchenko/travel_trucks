@@ -1,5 +1,6 @@
 .content {
   width: 360px;
+  margin-bottom: 40px;
 }
 
 .text {
@@ -16,7 +17,6 @@
   box-sizing: border-box;
   padding: 18px 0;
   padding-left: 45px;
-  margin-bottom: 40px;
   border-radius: 12px;
   background-color: #f7f7f7;
   color: #101828;
@@ -31,4 +31,24 @@
   position: absolute;
   top: 18px;
   left: 20px;
+}
+
+@media (max-width: 768px) {
+  .content {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .text {
+    font-size: 12px;
+  }
+  .location {
+    padding: 10px 0;
+    padding-left: 45px;
+
+    border-radius: 12px;
+  }
+  .icon {
+    top: 10px;
+    left: 20px;
+  }
 }

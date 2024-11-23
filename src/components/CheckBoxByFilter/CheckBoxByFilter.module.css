@@ -25,3 +25,12 @@
   gap: 8px;
   align-items: center;
 }
+
+@media (max-width: 480px) {
+  .checkBoxLabel {
+    padding: 7px 0;
+  }
+  .label {
+    font-size: 10px;
+  }
+}

@@ -58,3 +58,20 @@
 .btnLoadMore:focus {
   border: 1px solid rgba(216, 67, 67, 1);
 }
+
+@media (max-width: 768px) {
+  .btn {
+    width: 115px;
+    padding: 10px 30px;
+  }
+
+  .link {
+    min-width: 100px;
+
+    padding: 7px 5px;
+  }
+
+  .btnLoadMore {
+    padding: 10px 20px;
+  }
+}

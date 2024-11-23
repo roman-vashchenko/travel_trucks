@@ -8,3 +8,10 @@
 .item {
   width: calc((100% - 24px) / 3);
 }
+
+@media (max-width: 768px) {
+  .list {
+    gap: 7px;
+    margin-bottom: 20px;
+  }
+}

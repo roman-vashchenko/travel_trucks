@@ -64,3 +64,21 @@
   color: #475467;
   margin-bottom: 24px;
 }
+
+@media (max-width: 768px) {
+  img {
+    max-width: 100%;
+  }
+  .btnFavorite {
+    padding: 0;
+  }
+  .name,
+  .price,
+  .rating,
+  .location {
+    font-size: 12px;
+  }
+  .description {
+    font-size: 14px;
+  }
+}

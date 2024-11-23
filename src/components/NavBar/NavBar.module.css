@@ -6,6 +6,12 @@ nav {
   transform: translateX(-50%);
 }
 
+@media (max-width: 768px) {
+  nav {
+    display: none;
+  }
+}
+
 .link {
   padding: 24px 0;
   color: #101828;

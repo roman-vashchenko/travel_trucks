@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { fetchCamperById, fetchCampers } from "./operations";
-import toast from "react-hot-toast";
 
 const campersSlice = createSlice({
   name: "campers",
@@ -17,10 +16,8 @@ const campersSlice = createSlice({
         state.selectedItems = state.selectedItems.filter(
           (item) => item !== payload
         );
-        toast.success("The truck has been removed to favorites");
       } else {
         state.selectedItems.push(payload);
-        toast.success("The truck has been added to favorites");
       }
     },
   },
