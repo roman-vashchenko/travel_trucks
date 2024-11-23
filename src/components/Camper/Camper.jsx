@@ -30,7 +30,7 @@ const Camper = ({ camper }) => {
           className={css.img}
           src={camper.gallery[0].original}
           alt={camper.name}
-          width={292}
+          width={250}
         />
       </div>
       <div className={css.content}>

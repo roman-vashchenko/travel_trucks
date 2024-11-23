@@ -67,7 +67,7 @@
 
 @media (max-width: 768px) {
   img {
-    max-width: 100%;
+    min-width: 100%;
   }
   .btnFavorite {
     padding: 0;

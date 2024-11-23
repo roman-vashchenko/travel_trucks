@@ -33,7 +33,7 @@
   left: 20px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1280px) {
   .content {
     width: 100%;
     margin-bottom: 20px;
