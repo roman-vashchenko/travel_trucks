@@ -9,9 +9,16 @@
   width: calc((100% - 24px) / 3);
 }
 
-@media (max-width: 768px) {
+.item:nth-child(2) label div {
+  padding: 5px 0;
+}
+
+@media (max-width: 1280px) {
   .list {
     gap: 7px;
     margin-bottom: 20px;
+  }
+  .item:nth-child(2) label div {
+    padding: 15px 0;
   }
 }
