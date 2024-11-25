@@ -36,3 +36,9 @@
   resize: none;
   min-height: 118px;
 }
+
+@media (max-width: 1280px) {
+  .wrapperForm {
+    width: 100%;
+  }
+}

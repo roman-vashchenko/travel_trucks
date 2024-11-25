@@ -1,5 +1,6 @@
 .section {
   padding: 48px 64px 80px 64px;
+  min-height: 100vh;
 }
 
 .title {
@@ -39,7 +40,7 @@
 .imagesList {
   display: flex;
   gap: 20px;
-  height: 312px;
+  min-height: 312px;
   margin-bottom: 28px;
 }
 
@@ -55,7 +56,6 @@
 
 .description {
   color: #475467;
-  margin-bottom: 24px;
   margin-bottom: 60px;
 }
 
@@ -83,4 +83,27 @@
   width: 85px;
   height: 5px;
   background-color: #e44848;
+}
+
+@media (max-width: 1280px) {
+  .section {
+    padding: 30px 20px 30px 20px;
+  }
+  .imagesList {
+    display: block;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 70px;
+  }
+
+  .imgItem {
+    width: 100%;
+  }
+  .img {
+    min-width: 100%;
+  }
+
+  .additionalInformation {
+    justify-content: center;
+  }
 }

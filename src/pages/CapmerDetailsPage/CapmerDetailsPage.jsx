@@ -50,7 +50,7 @@ const CapmerDetailsPage = () => {
                   src={img.original}
                   alt={camper.name}
                   className={css.img}
-                  width={279}
+                  width={250}
                 />
               </li>
             ))}
