@@ -26,8 +26,22 @@ function App() {
             <Route index element={<HomePage />} />
             <Route path="/catalog" element={<CatalogCampersPage />} />
             <Route path="/catalog/:id" element={<CapmerDetailsPage />}>
-              <Route path="features" element={<CamperFeatures />} />
-              <Route path="reviews" element={<CamperReviews />} />
+              <Route
+                path="features"
+                element={
+                  <Suspense fallback={<p>Loading...</p>}>
+                    <CamperFeatures />
+                  </Suspense>
+                }
+              />
+              <Route
+                path="reviews"
+                element={
+                  <Suspense fallback={<p>Loading...</p>}>
+                    <CamperReviews />
+                  </Suspense>
+                }
+              />
             </Route>
             <Route
               path="*"
